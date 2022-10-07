@@ -1,19 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mabaffo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/06 11:21:17 by mabaffo           #+#    #+#             */
-/*   Updated: 2022/10/06 11:21:25 by mabaffo          ###   ########.fr       */
+/*   Created: 2022/10/07 12:10:57 by mabaffo           #+#    #+#             */
+/*   Updated: 2022/10/07 12:51:31 by mabaffo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isprint(int c)
+#include "libft.h"
+
+int ft_atoi(const char *nptr)
 {
-	if (c > 31 && c < 127)
-		return (1);
-	else
-		return (0);
+	size_t	i;
+	long int num;
+	int sign;
+	
+	i = 0;
+	num = 0;
+	sign = 0;
+	while (nptr[i] == 32)
+		i++;
+	if (nptr[i] == '-' || nptr[i] == '+')
+	{
+		if (nptr[i] == '-')
+			sign++;
+		i++;
+	}
+	while (ft_isdigit(nptr[i]))
+	{
+		num = num * 10 + nptr[i] - 48;
+		i++;
+	}
+	if (sign)
+		num = -num;
+	return (num);
 }

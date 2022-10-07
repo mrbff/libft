@@ -1,19 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mabaffo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/06 11:21:17 by mabaffo           #+#    #+#             */
-/*   Updated: 2022/10/06 11:21:25 by mabaffo          ###   ########.fr       */
+/*   Created: 2022/10/06 14:23:30 by mabaffo           #+#    #+#             */
+/*   Updated: 2022/10/06 14:33:55 by mabaffo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isprint(int c)
+void *ft_memchr(const void *s, int c, size_t n)
 {
-	if (c > 31 && c < 127)
-		return (1);
-	else
-		return (0);
+	size_t i;
+
+	i = 0;
+	while (i < n)
+	{
+		if (((unsigned char *)s)[i] == c)
+			return (&((unsigned char *))s[i]);
+		i++;
+	}
+	return (0);
 }

@@ -1,19 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isprint.c                                       :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mabaffo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/06 11:21:17 by mabaffo           #+#    #+#             */
-/*   Updated: 2022/10/06 11:21:25 by mabaffo          ###   ########.fr       */
+/*   Created: 2022/10/06 14:39:54 by mabaffo           #+#    #+#             */
+/*   Updated: 2022/10/06 14:58:35 by mabaffo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isprint(int c)
+int ft_memcmp(const void *s1, const void *s2, size_t n);
 {
-	if (c > 31 && c < 127)
-		return (1);
-	else
-		return (0);
+	size_t	i;
+	unsigned char *sc1;
+	unsigned char *sc2;
+
+	i = 0;
+	sc1 = ((unsigned char *)s1);
+	sc2 = ((unsigned char *)s2);
+	while ((sc1[i] || sc2[i]) && i < n)
+	{
+		if (sc1[i] > sc2[i])
+			return (1);
+		else if (sc1[i] > sc2[i])
+			return (-1)
+		i++;
+	}
+	return (0);
 }
