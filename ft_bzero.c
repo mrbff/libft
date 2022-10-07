@@ -6,13 +6,13 @@
 /*   By: mabaffo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 11:18:48 by mabaffo           #+#    #+#             */
-/*   Updated: 2022/10/06 11:18:54 by mabaffo          ###   ########.fr       */
+/*   Updated: 2022/10/07 16:25:22 by mabaffo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_bzero(void *s, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
 	while (n)
 	{

@@ -6,13 +6,13 @@
 /*   By: mabaffo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 12:06:56 by mabaffo           #+#    #+#             */
-/*   Updated: 2022/10/06 12:08:46 by mabaffo          ###   ########.fr       */
+/*   Updated: 2022/10/07 15:43:10 by mabaffo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_tolower(int c)
+int	ft_tolower(int c)
 {
-        if (c > 64 && c < 91)
-                return (c + 32);
-        return (c);
+	if (c > 64 && c < 91)
+		return (c + 32);
+	return (c);
 }

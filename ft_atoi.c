@@ -6,18 +6,18 @@
 /*   By: mabaffo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 12:10:57 by mabaffo           #+#    #+#             */
-/*   Updated: 2022/10/07 12:51:31 by mabaffo          ###   ########.fr       */
+/*   Updated: 2022/10/07 16:27:49 by mabaffo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int ft_atoi(const char *nptr)
+int	ft_atoi(const char *nptr)
 {
-	size_t	i;
-	long int num;
-	int sign;
-	
+	size_t		i;
+	long int	num;
+	int			sign;
+
 	i = 0;
 	num = 0;
 	sign = 0;

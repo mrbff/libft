@@ -6,11 +6,13 @@
 /*   By: mabaffo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 11:20:47 by mabaffo           #+#    #+#             */
-/*   Updated: 2022/10/06 11:20:51 by mabaffo          ###   ########.fr       */
+/*   Updated: 2022/10/07 16:31:34 by mabaffo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int ft_isascii(int c)
+#include "libft.h"
+
+int	ft_isascii(int c)
 {
 	if (c >= 0 && c <= 127)
 		return (1);

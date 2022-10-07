@@ -21,6 +21,8 @@ files 	   = ft_isalpha \
 			ft_memcmp \
 			ft_strnstr \
 			ft_atoi \
+			ft_calloc \
+			ft_strdup \
 
 Compiler	= gcc
 

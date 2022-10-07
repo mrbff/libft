@@ -6,13 +6,13 @@
 /*   By: mabaffo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 11:21:52 by mabaffo           #+#    #+#             */
-/*   Updated: 2022/10/06 11:21:54 by mabaffo          ###   ########.fr       */
+/*   Updated: 2022/10/07 16:28:54 by mabaffo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void *ft_memset(void *s, int c, size_t n)
+void	*ft_memset(void *s, int c, size_t n)
 {
 	while (n)
 	{
