@@ -6,7 +6,7 @@
 /*   By: mabaffo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 11:44:32 by mabaffo           #+#    #+#             */
-/*   Updated: 2022/10/07 16:45:34 by mabaffo          ###   ########.fr       */
+/*   Updated: 2022/10/08 01:17:01 by mabaffo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,21 +16,25 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
 	size_t	i;
 	size_t	j;
-	size_t	s;
+	size_t	src_len;
+	size_t	dst_len;
 
-	i = 0;
-	s = ft_strlen(dest);
-	j = s;
+	j = 0;
+	dst_len = ft_strlen(dst);
+	src_len = ft_strlen(src);
+	i = dst_len;
 	if (size == 0)
-		return (ft_strlen(src));
-	if (size < ft_strlen(dest))
-		return (size + ft_strlen(src));
-	while (src[i] && j < size)
+		return (src_len);
+	if (size < dst_len)
+		return (src_len + size);
+	else
 	{
-		dest[j] = src[i];
-		j++;
-		i++;
+		while (src[j] && (dst_len + j) < size)
+			dst[i++] = src[j++];
+		if ((dst_len + j) == size && dst_len < size)
+			dst[--i] = '\0';
+		else
+			dst[i] = '\0';
+		return (src_len + dst_len);
 	}
-	dest[j] = '\0';
-	return (s + ft_strlen(src) + 1);
 }

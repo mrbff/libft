@@ -6,7 +6,7 @@
 /*   By: mabaffo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 12:33:59 by mabaffo           #+#    #+#             */
-/*   Updated: 2022/10/07 16:40:15 by mabaffo          ###   ########.fr       */
+/*   Updated: 2022/10/08 01:58:19 by mabaffo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,14 +17,15 @@ char	*ft_strchr(const char *s, int c)
 	size_t	i;
 
 	i = 0;
+	if (!s)
+		return (NULL);
 	while (s[i])
 	{
 		if (s[i] == c)
-			return (&s[i]);
+			return (&((char *)s)[i]);
 		i++;
 	}
 	if (c == '\0')
-		return (&s[i]);
-	else
-		return (0);
+		return (&((char *)s)[i]);
+	return (0);
 }
