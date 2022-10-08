@@ -6,7 +6,7 @@
 /*   By: mabaffo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 13:55:05 by mabaffo           #+#    #+#             */
-/*   Updated: 2022/10/07 16:24:54 by mabaffo          ###   ########.fr       */
+/*   Updated: 2022/10/08 14:58:23 by mabaffo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	*ft_strdup(const char *s)
 
 	i = 0;
 	len = ft_strlen(s);
-	str = calloc(len + 1, 1);
+	str = ft_calloc(len + 1, 1);
 	if (str == NULL)
 		return (NULL);
 	while (s[i])

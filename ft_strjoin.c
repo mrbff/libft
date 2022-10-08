@@ -1,24 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mabaffo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/07 13:34:30 by mabaffo           #+#    #+#             */
-/*   Updated: 2022/10/08 14:55:08 by mabaffo          ###   ########.fr       */
+/*   Created: 2022/10/08 18:11:45 by mabaffo           #+#    #+#             */
+/*   Updated: 2022/10/08 18:36:29 by mabaffo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_calloc(size_t nmemb, size_t size)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	void	*ptr;
+	size_t	i;
+	size_t	j;
+	char	*joint;
 
-	ptr = malloc(nmemb * size);
-	if (!ptr)
+	i = 0;
+	j = 0;
+	joint = malloc(ft_strlen(s1) + ft_strlen(s2) + 1);
+	if (!joint)
 		return (NULL);
-	ft_bzero(ptr, nmemb * size);
-	return (ptr);
+	while (s1[i])
+	{
+		joint[i] = s1[i];
+		i++;
+	}
+	while (s2[j])
+	{
+		joint[i] = s2[j];
+		i++;
+		j++;
+	}
+	joint[i] = '\0';
+	return (joint);
 }
