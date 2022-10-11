@@ -6,7 +6,7 @@
 /*   By: mabaffo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/10 23:47:39 by mabaffo           #+#    #+#             */
-/*   Updated: 2022/10/10 23:53:02 by mabaffo          ###   ########.fr       */
+/*   Updated: 2022/10/11 10:40:43 by mabaffo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,10 @@
 
 t_list	*ft_lstlast(t_list *lst)
 {
-	while (lst->next)
-		lst = lst->next;
+	if (lst)
+	{	
+		while (lst->next)
+			lst = lst->next;
+	}
 	return (lst);
 }
