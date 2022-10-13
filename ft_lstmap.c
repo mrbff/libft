@@ -6,13 +6,13 @@
 /*   By: mabaffo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 19:13:17 by mabaffo           #+#    #+#             */
-/*   Updated: 2022/10/11 20:15:42 by mabaffo          ###   ########.fr       */
+/*   Updated: 2022/10/13 17:33:26 by mabaffo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list *ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
+t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*nlist;
 	t_list	*tmp;

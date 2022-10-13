@@ -6,13 +6,13 @@
 /*   By: mabaffo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/11 10:55:42 by mabaffo           #+#    #+#             */
-/*   Updated: 2022/10/11 11:05:21 by mabaffo          ###   ########.fr       */
+/*   Updated: 2022/10/13 17:34:58 by mabaffo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void ft_lstdelone(t_list *lst, void (*del)(void *))
+void	ft_lstdelone(t_list *lst, void (*del)(void *))
 {
 	if (lst && del)
 	{
