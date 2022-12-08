@@ -1,39 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   ft_strtoupper.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mabaffo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/09 23:26:47 by mabaffo           #+#    #+#             */
-/*   Updated: 2022/12/08 21:17:51 by mabaffo          ###   ########.fr       */
+/*   Created: 2022/12/08 20:43:25 by mabaffo           #+#    #+#             */
+/*   Updated: 2022/12/08 20:49:37 by mabaffo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
-
-char	*ft_itoa(int n)
+char	*ft_strtoup(char *str)
 {
-	char		*str;
-	long int	num;
-	int			d;
+        int     i;
 
-	d = ft_countdig(n);
-	num = n;
-	if (n < 0)
-		num = -num;
-	d += (n < 0);
-	str = ft_calloc(d + 1, 1);
-	if (!str)
-		return (NULL);
-	if (n < 0)
-		str[0] = '-';
-	if (n == 0)
-		str[0] = 48;
-	while (num > 0)
-	{
-		str[--d] = num % 10 + 48;
-		num /= 10;
-	}
+        i = 0;
+        while (s[i])
+        {
+                if (s[i] > 96 && s[i] < 123)
+                        s[i] -= 32;
+                i++;
+        }
 	return (str);
 }

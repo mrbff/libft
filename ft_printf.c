@@ -1,39 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mabaffo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/09 23:26:47 by mabaffo           #+#    #+#             */
-/*   Updated: 2022/12/08 21:17:51 by mabaffo          ###   ########.fr       */
+/*   Created: 2022/10/18 18:37:53 by mabaffo           #+#    #+#             */
+/*   Updated: 2022/12/08 21:22:13 by mabaffo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_itoa(int n)
+int	ft_printf(const char *format, ...)
 {
-	char		*str;
-	long int	num;
-	int			d;
+	size_t	ret;
+	size_t	i;
+	va_list	argm;
 
-	d = ft_countdig(n);
-	num = n;
-	if (n < 0)
-		num = -num;
-	d += (n < 0);
-	str = ft_calloc(d + 1, 1);
-	if (!str)
-		return (NULL);
-	if (n < 0)
-		str[0] = '-';
-	if (n == 0)
-		str[0] = 48;
-	while (num > 0)
+	i = 0;
+	ret = 0;
+	va_start(argm, format);
+	while (format[i])
 	{
-		str[--d] = num % 10 + 48;
-		num /= 10;
+		i += ft_print_till_arg(&((char *)format)[i], &ret);
+		if (format[i] == '%')
+			i++;
+		if (format[i])
+		{
+			ft_printargm(format[i], &argm, &ret);
+			i++;
+		}
 	}
-	return (str);
+	va_end(argm);
+	return (ret);
 }

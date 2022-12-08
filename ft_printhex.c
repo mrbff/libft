@@ -1,39 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   ft_printhex.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mabaffo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/10/09 23:26:47 by mabaffo           #+#    #+#             */
-/*   Updated: 2022/12/08 21:17:51 by mabaffo          ###   ########.fr       */
+/*   Created: 2022/10/22 22:25:25 by mabaffo           #+#    #+#             */
+/*   Updated: 2022/12/08 23:27:30 by mabaffo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_itoa(int n)
+void	ft_printhex(long unsigned int n, size_t *pret, int upc)
 {
-	char		*str;
-	long int	num;
-	int			d;
+	char	*s;	
 
-	d = ft_countdig(n);
-	num = n;
-	if (n < 0)
-		num = -num;
-	d += (n < 0);
-	str = ft_calloc(d + 1, 1);
-	if (!str)
-		return (NULL);
-	if (n < 0)
-		str[0] = '-';
-	if (n == 0)
-		str[0] = 48;
-	while (num > 0)
+	s = ft_lutoax(n);
+	if (!s)
 	{
-		str[--d] = num % 10 + 48;
-		num /= 10;
+		ft_putchar_fd('0', 1);
+		(*pret)++;
+		return ;
 	}
-	return (str);
+	(*pret) += ft_strlen(s);
+	if (upc)
+		ft_strtoupper(s);
+	ft_putstr_fd(s, 1);
+	free(s);
 }

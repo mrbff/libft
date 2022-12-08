@@ -6,7 +6,7 @@
 #    By: mabaffo <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/10 22:45:01 by mabaffo           #+#    #+#              #
-#    Updated: 2022/12/02 14:34:50 by mabaffo          ###   ########.fr        #
+#    Updated: 2022/12/08 23:23:19 by mabaffo          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -46,6 +46,21 @@ files 	   = ft_isalpha \
 			ft_putstr_fd \
 			ft_putendl_fd \
 			ft_putnbr_fd \
+			ft_memdel \
+			ft_strcmp \
+			ft_strtolower \
+			ft_atof \
+			ft_countdig \
+			ft_lucountdig \
+			ft_lutoax \
+			ft_utoa \
+			ft_printf \
+			ft_printhex \
+			ft_print_till_arg \
+			ft_printargm \
+			ft_printstr \
+			ft_printnbr \
+			ft_printunbr \
 
 bfiles	= ft_lstnew \
 		ft_lstadd_front \
@@ -75,7 +90,7 @@ NAME	= $(OUTN)
 
 $(NAME):
 	$(CC) $(CFLAGS) -c $(CFILES) -I./
-	ar -rsv $(OUTN) $(OFILES)
+	ar -rs $(OUTN) $(OFILES)
 
 all: $(NAME)
 
@@ -90,6 +105,6 @@ re: fclean all
 
 bonus:
 	$(CC) $(CFLAGS) -c $(CBFILES) -I./
-	ar -rsv $(OUTN) $(OBFILES)
+	ar -rs $(OUTN) $(OBFILES)
 
 .PHONY: all, clean, fclean, re, bonus
