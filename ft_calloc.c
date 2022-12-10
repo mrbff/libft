@@ -6,7 +6,7 @@
 /*   By: mabaffo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 13:34:30 by mabaffo           #+#    #+#             */
-/*   Updated: 2022/10/08 14:55:08 by mabaffo          ###   ########.fr       */
+/*   Updated: 2022/12/09 19:59:00 by mabaffo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*ptr;
+
 
 	ptr = malloc(nmemb * size);
 	if (!ptr)

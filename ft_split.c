@@ -6,13 +6,13 @@
 /*   By: mabaffo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/09 16:14:39 by mabaffo           #+#    #+#             */
-/*   Updated: 2022/10/09 23:11:10 by mabaffo          ###   ########.fr       */
+/*   Updated: 2022/12/09 17:55:45 by mabaffo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	countstr(char *s, char c)
+static size_t	countstr(char *s, char c)
 {
 	size_t	i;
 	size_t	n;
@@ -32,7 +32,7 @@ size_t	countstr(char *s, char c)
 	return (n);
 }
 
-size_t	unc(char *s, char c)
+static size_t	unc(char *s, char c)
 {
 	size_t	i;
 

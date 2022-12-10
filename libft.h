@@ -6,7 +6,7 @@
 /*   By: mabaffo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 16:35:49 by mabaffo           #+#    #+#             */
-/*   Updated: 2022/12/08 21:20:23 by mabaffo          ###   ########.fr       */
+/*   Updated: 2022/12/09 17:52:19 by mabaffo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,7 @@ void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 
+int     ft_ischarofset(char *set, char c);
 size_t  ft_countdig(long int n);
 void	ft_memdel(void **ap);
 int		ft_strcmp(const char *s1, const char *s2);

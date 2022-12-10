@@ -6,7 +6,7 @@
 #    By: mabaffo <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/10 22:45:01 by mabaffo           #+#    #+#              #
-#    Updated: 2022/12/08 23:23:19 by mabaffo          ###   ########.fr        #
+#    Updated: 2022/12/09 17:53:27 by mabaffo          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -46,6 +46,7 @@ files 	   = ft_isalpha \
 			ft_putstr_fd \
 			ft_putendl_fd \
 			ft_putnbr_fd \
+			ft_ischarofset \
 			ft_memdel \
 			ft_strcmp \
 			ft_strtolower \
