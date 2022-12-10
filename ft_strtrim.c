@@ -6,7 +6,7 @@
 /*   By: mabaffo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 18:51:07 by mabaffo           #+#    #+#             */
-/*   Updated: 2022/12/10 15:36:59 by mabaffo          ###   ########.fr       */
+/*   Updated: 2022/12/10 22:31:40 by mabaffo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,11 @@ char	*ft_strtrim(char const *s1, char const *set)
 	unsigned int	n1;
 	unsigned int	n2;
 
+	
+	if (s1 == NULL)
+		return (NULL);
+	if (set == NULL)
+		return (ft_strdup(s1));
 	n1 = 0;
 	n2 = 0;
 	s1len = ft_strlen((char *)s1) - 1;
