@@ -6,7 +6,7 @@
 /*   By: mabaffo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/09 16:14:39 by mabaffo           #+#    #+#             */
-/*   Updated: 2022/12/11 02:56:34 by mabaffo          ###   ########.fr       */
+/*   Updated: 2022/12/11 16:00:09 by mabaffo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ static long long int	countstr(char *s, char c)
 	long long int	i;
 	long long int	n;
 
-	if (!s)
+	if (!s || !(*s))
 		return (0);
 	n = 0;
 	i = 0;
