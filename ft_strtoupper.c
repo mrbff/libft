@@ -6,20 +6,22 @@
 /*   By: mabaffo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 20:43:25 by mabaffo           #+#    #+#             */
-/*   Updated: 2022/12/08 20:49:37 by mabaffo          ###   ########.fr       */
+/*   Updated: 2022/12/11 00:41:59 by mabaffo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 char	*ft_strtoup(char *str)
 {
-        int     i;
+	int	i;
 
-        i = 0;
-        while (s[i])
-        {
-                if (s[i] > 96 && s[i] < 123)
-                        s[i] -= 32;
-                i++;
-        }
+	i = 0;
+	while (s[i])
+	{
+		if (s[i] > 96 && s[i] < 123)
+			s[i] -= 32;
+		i++;
+	}
 	return (str);
 }

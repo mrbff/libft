@@ -6,7 +6,7 @@
 /*   By: mabaffo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 11:21:52 by mabaffo           #+#    #+#             */
-/*   Updated: 2022/10/07 16:28:54 by mabaffo          ###   ########.fr       */
+/*   Updated: 2022/12/11 01:00:52 by mabaffo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,12 @@
 
 void	*ft_memset(void *s, int c, size_t n)
 {
+	if (!s)
+		return (NULL);
 	while (n)
 	{
-		((unsigned char *)s)[n - 1] = c;
 		n--;
+		((unsigned char *)s)[n] = c;
 	}
 	return (s);
 }

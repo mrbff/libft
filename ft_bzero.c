@@ -6,7 +6,7 @@
 /*   By: mabaffo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/06 11:18:48 by mabaffo           #+#    #+#             */
-/*   Updated: 2022/12/09 19:57:14 by mabaffo          ###   ########.fr       */
+/*   Updated: 2022/12/11 01:01:01 by mabaffo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void	ft_bzero(void *s, size_t n)
 		return ;
 	while (n)
 	{
-		((unsigned char *)s)[n - 1] = '\0';
 		n--;
+		((unsigned char *)s)[n] = '\0';
 	}
 }

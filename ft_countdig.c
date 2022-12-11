@@ -6,25 +6,25 @@
 /*   By: mabaffo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 21:18:50 by mabaffo           #+#    #+#             */
-/*   Updated: 2022/12/08 21:19:14 by mabaffo          ###   ########.fr       */
+/*   Updated: 2022/12/11 01:07:43 by mabaffo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t  ft_countdig(long int n)
+size_t	ft_countdig(long int n)
 {
-        size_t  dig;
+	size_t	dig;
 
-        if (n == 0)
-                return (1);
-        dig = 0;
-        if (n < 0)
-                n = -n;
-        while (n > 0)
-        {
-                n /= 10;
-                dig++;
-        }
-        return (dig);
+	if (n == 0)
+		return (1);
+	dig = 0;
+	if (n < 0)
+		n = -n;
+	while (n > 0)
+	{
+		n /= 10;
+		dig++;
+	}
+	return (dig);
 }

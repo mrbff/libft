@@ -6,7 +6,7 @@
 #    By: mabaffo <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/10/10 22:45:01 by mabaffo           #+#    #+#              #
-#    Updated: 2022/12/09 17:53:27 by mabaffo          ###   ########.fr        #
+#    Updated: 2022/12/11 01:15:56 by mabaffo          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -91,7 +91,7 @@ NAME	= $(OUTN)
 
 $(NAME):
 	$(CC) $(CFLAGS) -c $(CFILES) -I./
-	ar -rs $(OUTN) $(OFILES)
+	ar -rsv $(OUTN) $(OFILES)
 
 all: $(NAME)
 

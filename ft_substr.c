@@ -6,7 +6,7 @@
 /*   By: mabaffo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/08 15:14:03 by mabaffo           #+#    #+#             */
-/*   Updated: 2022/12/10 16:07:50 by mabaffo          ###   ########.fr       */
+/*   Updated: 2022/12/11 01:12:41 by mabaffo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char	*substr;
 	size_t	i;
 
-	if (!s || !(*s))
-                return (NULL);
+	if (!s)
+		return (NULL);
 	i = 0;
 	substr = malloc(len + 1);
 	if (!substr)

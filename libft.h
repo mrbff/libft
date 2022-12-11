@@ -6,7 +6,7 @@
 /*   By: mabaffo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 16:35:49 by mabaffo           #+#    #+#             */
-/*   Updated: 2022/12/09 17:52:19 by mabaffo          ###   ########.fr       */
+/*   Updated: 2022/12/10 23:14:06 by mabaffo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,24 +51,24 @@ void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 
-int     ft_ischarofset(char *set, char c);
-size_t  ft_countdig(long int n);
+int		ft_ischarofset(char *set, char c);
+size_t	ft_countdig(long int n);
 void	ft_memdel(void **ap);
 int		ft_strcmp(const char *s1, const char *s2);
 char	*ft_strtolower(char *str);
 char	*ft_strtoupper(char *str);
 double	ft_atof(char *s);
-size_t  ft_lucountdig(long long unsigned int n);
-char    *ft_lutoax(long unsigned int n);
-char    *ft_utoa(unsigned int n);
+size_t	ft_lucountdig(long long unsigned int n);
+char	*ft_lutoax(long unsigned int n);
+char	*ft_utoa(unsigned int n);
 
-int             ft_printf(const char *format, ...);
-void    ft_printhex(long unsigned int n, size_t *pret, int upc);
-size_t  ft_print_till_arg(char *s, size_t *pret);
-void    ft_printargm(char specifier, va_list *pargm, size_t *pret);
-void    ft_printstr(char *s, size_t *pret);
-void    ft_printnbr(int n, size_t *pret);
-void    ft_printunbr(unsigned int n, size_t *pret);
+int		ft_printf(const char *format, ...);
+void	ft_printhex(long unsigned int n, size_t *pret, int upc);
+size_t	ft_print_till_arg(char *s, size_t *pret);
+void	ft_printargm(char specifier, va_list *pargm, size_t *pret);
+void	ft_printstr(char *s, size_t *pret);
+void	ft_printnbr(int n, size_t *pret);
+void	ft_printunbr(unsigned int n, size_t *pret);
 
 typedef struct s_list
 {
