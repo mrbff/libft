@@ -6,7 +6,7 @@
 /*   By: mabaffo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/09 16:14:39 by mabaffo           #+#    #+#             */
-/*   Updated: 2022/12/11 16:00:09 by mabaffo          ###   ########.fr       */
+/*   Updated: 2022/12/11 16:31:52 by mabaffo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ char	**ft_split(char const *s, char c)
 	long long	i;
 	long long	scount;
 	long long	ct;
-	char	**matrix;
+	char		**matrix;
 
 	i = 0;
 	ct = 0;
