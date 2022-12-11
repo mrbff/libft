@@ -6,7 +6,7 @@
 /*   By: mabaffo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/08 20:43:25 by mabaffo           #+#    #+#             */
-/*   Updated: 2022/12/11 00:41:59 by mabaffo          ###   ########.fr       */
+/*   Updated: 2022/12/11 18:21:29 by mabaffo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,10 +17,10 @@ char	*ft_strtoup(char *str)
 	int	i;
 
 	i = 0;
-	while (s[i])
+	while (str[i])
 	{
-		if (s[i] > 96 && s[i] < 123)
-			s[i] -= 32;
+		if (str[i] > 96 && str[i] < 123)
+			str[i] -= 32;
 		i++;
 	}
 	return (str);

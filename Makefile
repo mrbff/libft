@@ -1,18 +1,6 @@
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    Makefile                                           :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: mabaffo <marvin@42.fr>                     +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2022/10/10 22:45:01 by mabaffo           #+#    #+#              #
-#    Updated: 2022/12/11 01:15:56 by mabaffo          ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
+NAME	= libft
 
-Library		= libft
-
-files 	   = ft_isalpha \
+FILES 	   = ft_isalpha \
 	     		ft_isdigit \
 			ft_isalnum \
 			ft_isascii \
@@ -49,6 +37,7 @@ files 	   = ft_isalpha \
 			ft_ischarofset \
 			ft_memdel \
 			ft_strcmp \
+			ft_strtoupper \
 			ft_strtolower \
 			ft_atof \
 			ft_countdig \
@@ -63,7 +52,7 @@ files 	   = ft_isalpha \
 			ft_printnbr \
 			ft_printunbr \
 
-bfiles	= ft_lstnew \
+BFILES	= ft_lstnew \
 		ft_lstadd_front \
 		ft_lstsize \
 		ft_lstlast \
@@ -77,17 +66,15 @@ CC	= gcc
 
 CFLAGS	= -Wall -Wextra -Werror
 
-OUTN	= $(Library).a
+OUTN	= $(NAME).a
 
-CFILES	= $(files:%=%.c)
+CFILES	= $(FILES:%=%.c)
 
-CBFILES  = $(bfiles:%=%.c)
+CBFILES  = $(BFILES:%=%.c)
 
-OFILES	= $(files:%=%.o)
+OFILES	= $(FILES:%=%.o)
 
-OBFILES  = $(bfiles:%=%.o)
-
-NAME	= $(OUTN)
+OBFILES  = $(BFILES:%=%.o)
 
 $(NAME):
 	$(CC) $(CFLAGS) -c $(CFILES) -I./
@@ -96,16 +83,15 @@ $(NAME):
 all: $(NAME)
 
 clean:
-	rm -f $(NAME)
-	rm -f $(OBFILES) $(OFILES)
+	rm -rf $(OBFILES) $(OFILES)
 
 fclean: clean
-	rm -f $(NAME)
+	rm -rf $(OUTN)
 
 re: fclean all
 
 bonus:
 	$(CC) $(CFLAGS) -c $(CBFILES) -I./
-	ar -rs $(OUTN) $(OBFILES)
+	ar -rsv $(OUTN) $(OBFILES)
 
 .PHONY: all, clean, fclean, re, bonus
