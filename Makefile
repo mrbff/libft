@@ -51,6 +51,8 @@ FILES 	   = ft_isalpha \
 			ft_printstr \
 			ft_printnbr \
 			ft_printunbr \
+			ft_printbits \
+			ft_printbytes \
 
 BFILES	= ft_lstnew \
 		ft_lstadd_front \
@@ -77,21 +79,21 @@ OFILES	= $(FILES:%=%.o)
 OBFILES  = $(BFILES:%=%.o)
 
 $(NAME):
-	$(CC) $(CFLAGS) -c $(CFILES) -I./
-	ar -rsv $(OUTN) $(OFILES)
+	@ $(CC) $(CFLAGS) -c $(CFILES) -I./
+	@ ar -rs $(OUTN) $(OFILES)
 
 all: $(NAME)
 
 clean:
-	rm -rf $(OBFILES) $(OFILES)
+	@ rm -rf $(OBFILES) $(OFILES)
 
 fclean: clean
-	rm -rf $(OUTN)
+	@ rm -rf $(OUTN)
 
 re: fclean all
 
 bonus:
-	$(CC) $(CFLAGS) -c $(CBFILES) -I./
-	ar -rsv $(OUTN) $(OBFILES)
+	@ $(CC) $(CFLAGS) -c $(CBFILES) -I./
+	@ ar -rs $(OUTN) $(OBFILES)
 
 .PHONY: all, clean, fclean, re, bonus

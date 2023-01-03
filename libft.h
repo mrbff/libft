@@ -6,7 +6,7 @@
 /*   By: mabaffo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 16:35:49 by mabaffo           #+#    #+#             */
-/*   Updated: 2022/12/10 23:14:06 by mabaffo          ###   ########.fr       */
+/*   Updated: 2023/01/03 11:45:41 by mabaffo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,6 +69,8 @@ void	ft_printargm(char specifier, va_list *pargm, size_t *pret);
 void	ft_printstr(char *s, size_t *pret);
 void	ft_printnbr(int n, size_t *pret);
 void	ft_printunbr(unsigned int n, size_t *pret);
+void	ft_printbits(unsigned char c);
+void	ft_printbytes(char *s);
 
 typedef struct s_list
 {

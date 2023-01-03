@@ -1,27 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strtoupper.c                                    :+:      :+:    :+:   */
+/*   ft_printbytes.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mabaffo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/12/08 20:43:25 by mabaffo           #+#    #+#             */
-/*   Updated: 2022/12/28 16:07:51 by mabaffo          ###   ########.fr       */
+/*   Created: 2023/01/03 11:51:24 by mabaffo           #+#    #+#             */
+/*   Updated: 2023/01/03 11:53:35 by mabaffo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strtoupper(char *str)
+void	ft_printbytes(char *s)
 {
 	int	i;
 
 	i = 0;
-	while (str[i])
+	while (s[i])
 	{
-		if (str[i] > 96 && str[i] < 123)
-			str[i] -= 32;
+		ft_printbits(s[i]);
 		i++;
 	}
-	return (str);
 }
