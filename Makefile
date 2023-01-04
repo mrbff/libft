@@ -1,7 +1,7 @@
-NAME	= libft
+NAME		= libft
 
-FILES 	   = ft_isalpha \
-	     		ft_isdigit \
+FILES 		= ft_isalpha \
+			ft_isdigit \
 			ft_isalnum \
 			ft_isascii \
 			ft_isprint \
@@ -53,30 +53,34 @@ FILES 	   = ft_isalpha \
 			ft_printunbr \
 			ft_printbits \
 			ft_printbytes \
+			ft_atoli \
+			ft_licountdig \
+			ft_litoa \
 
-BFILES	= ft_lstnew \
-		ft_lstadd_front \
-		ft_lstsize \
-		ft_lstlast \
-		ft_lstadd_back \
-		ft_lstclear \
-		ft_lstdelone \
-		ft_lstiter \
-		ft_lstmap \
 
-CC	= gcc
+BFILES		= ft_lstnew \
+			ft_lstadd_front \
+			ft_lstsize \
+			ft_lstlast \
+			ft_lstadd_back \
+			ft_lstclear \
+			ft_lstdelone \
+			ft_lstiter \
+			ft_lstmap \
 
-CFLAGS	= -Wall -Wextra -Werror
+CC			= gcc
 
-OUTN	= $(NAME).a
+CFLAGS		= -Wall -Wextra -Werror
 
-CFILES	= $(FILES:%=%.c)
+OUTN		= $(NAME).a
 
-CBFILES  = $(BFILES:%=%.c)
+CFILES		= $(FILES:%=%.c)
 
-OFILES	= $(FILES:%=%.o)
+CBFILES		= $(BFILES:%=%.c)
 
-OBFILES  = $(BFILES:%=%.o)
+OFILES		= $(FILES:%=%.o)
+
+OBFILES		= $(BFILES:%=%.o)
 
 $(NAME):
 	@ $(CC) $(CFLAGS) -c $(CFILES) -I./
