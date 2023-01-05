@@ -67,6 +67,8 @@ BFILES		= ft_lstnew \
 			ft_lstdelone \
 			ft_lstiter \
 			ft_lstmap \
+			ft_print_ilst \
+			ft_print_clst \
 
 CC			= gcc
 
