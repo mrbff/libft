@@ -6,7 +6,7 @@
 /*   By: mabaffo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/05 18:01:17 by mabaffo           #+#    #+#             */
-/*   Updated: 2023/01/06 16:11:58 by mabaffo          ###   ########.fr       */
+/*   Updated: 2023/01/06 16:14:38 by mabaffo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	ft_print_clst(t_list *lst)
 
 	if (!lst)
 	{
-		ft_print("(Null)\n");
+		ft_printf("(Null)\n");
 		return (0);
 	}
 	i = 1;
