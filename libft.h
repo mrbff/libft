@@ -6,7 +6,7 @@
 /*   By: mabaffo <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/07 16:35:49 by mabaffo           #+#    #+#             */
-/*   Updated: 2023/01/05 19:21:39 by mabaffo          ###   ########.fr       */
+/*   Updated: 2023/01/11 16:23:00 by mabaffo          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -94,5 +94,6 @@ t_list		*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
 int			ft_print_ilst(t_list *lst);
 int			ft_print_clst(t_list *lst);
+int			ft_print_ulst(t_list *lst);
 
 #endif
