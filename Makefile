@@ -104,3 +104,4 @@ bonus:
 	@ ar -rs $(OUTN) $(OBFILES)
 
 .PHONY: all, clean, fclean, re, bonus
+.SILENT:
